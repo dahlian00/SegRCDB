@@ -93,3 +93,6 @@ If you find our work useful for your research, please consider citing our paper:
   pages     = {20054-20063}
 }
 ```
+
+## Terms of use
+The authors affiliated in National Institute of Advanced Industrial Science and Technology (AIST), Tokyo Denki University (TDU), and Tokyo Institute of Technology (TITech) are not responsible for the reproduction, duplication, copy, sale, trade, resell or exploitation for any commercial purposes, of any portion of the images and any portion of derived the data. In no event will we be also liable for any other damages resulting from this data or any derived data.
