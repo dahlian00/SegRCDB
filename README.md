@@ -79,7 +79,7 @@ python SegRCDB_render.py \
 You can change the dataset folder name with --save_root. For faster execution, you should run the bash as follows. You must adjust the thread parameter --numof_thread in the script depending on your computational resource.
 
 # Pre-trained weights
-Downloade pre-training models : [**Google Drive**](https://drive.google.com/drive/folders/1MGDnq6kZEzxgKquVnSO-B0UpT4N3ylwY?usp=sharing)
+Download pre-training models : [**Google Drive**](https://drive.google.com/drive/folders/1MGDnq6kZEzxgKquVnSO-B0UpT4N3ylwY?usp=sharing)
 
 # Citation
 If you find our work useful for your research, please consider citing our paper:
