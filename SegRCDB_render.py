@@ -131,10 +131,10 @@ for k2 in range(int(images)):
             for i in range(vertex_number):
                 draw.line((vertex_x[i], vertex_y[i], vertex_x[i + 1], vertex_y[i + 1]) , fill = (gray, gray, gray), width = 1)
                 
-        if not args.display:
-            im[k2].save(args.save_root + "/image/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
-        else:
-            im[k2].show()
+    if not args.display:
+        im[k2].save(args.save_root + "/image/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
+    else:
+        im[k2].show()
 
     mask_save = mask[k2].convert("L")
     mask_save.save(args.save_root + "/mask/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
