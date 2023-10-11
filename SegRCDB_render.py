@@ -109,9 +109,6 @@ for k2 in range(int(images)):
             if args.mode == "M1":
                 for i in range(vertex_number):
                     mask_draw.line((vertex_x[i], vertex_y[i], vertex_x[i + 1], vertex_y[i + 1]) , fill = (g, g, g), width = 1)
-                if line_draw == line_draw_num - 1:
-                    mask_save = mask[k2].convert("L")
-                    mask_save.save(args.save_root + "/mask/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
 
             elif args.mode == "M2":
                 if line_draw == 0:
@@ -125,15 +122,11 @@ for k2 in range(int(images)):
                         mask_draw.line((mask_hole[i][0], mask_hole[i][1], mask_hole[i+1][0], mask_hole[i+1][1]), fill = (g, g, g), width = 1)
                     for i in range(vertex_number*2-1):
                         mask_draw.line((points[i][0], points[i][1], points[i+1][0], points[i+1][1]), fill = (g, g, g), width = 1)
-                    mask_save = mask[k2].convert("L")
-                    mask_save.save(args.save_root + "/mask/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
 
             elif args.mode == "M3":
                 if line_draw == line_draw_num - 1:
                     for i in range(vertex_number):
                         mask_draw.polygon(points, fill = (g, g, g))
-                    mask_save = mask[k2].convert("L")
-                    mask_save.save(args.save_root + "/mask/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
 
             for i in range(vertex_number):
                 draw.line((vertex_x[i], vertex_y[i], vertex_x[i + 1], vertex_y[i + 1]) , fill = (gray, gray, gray), width = 1)
@@ -142,3 +135,6 @@ for k2 in range(int(images)):
             im[k2].save(args.save_root + "/image/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
         else:
             im[k2].show()
+
+    mask_save = mask[k2].convert("L")
+    mask_save.save(args.save_root + "/mask/%06d.png" % ((images * args.thread_num + k2)), quality = 95)
