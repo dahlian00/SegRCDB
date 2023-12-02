@@ -6,6 +6,7 @@ Details are described in the following paper:
 > [**SegRCDB: Semantic Segmentation via Formula-Driven Supervised Learning**](https://openaccess.thecvf.com/content/ICCV2023/html/Shinoda_SegRCDB_Semantic_Segmentation_via_Formula-Driven_Supervised_Learning_ICCV_2023_paper.html),  
 > Risa Shinoda, Ryo Hayamizu, Kodai Nakashima, Nakamasa Inoue, Rio Yokota, Hirokatsu Kataoka
 > *ICCV 2023*
+<img src="segrcdb.JPG" width= "500px">
 
 # Changelog
 2023/09/29: Released SegRCDB generation code and pretrained models.
