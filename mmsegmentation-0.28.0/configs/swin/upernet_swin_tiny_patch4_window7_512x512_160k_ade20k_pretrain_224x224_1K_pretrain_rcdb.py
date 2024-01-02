@@ -1,5 +1,5 @@
 _base_ = [
-    '../_base_/models/upernet_swin_pretrain_rcdb.py', '../_base_/datasets/rcdb.py',
+    '../_base_/models/upernet_swin_pretrain_segrcdb.py', '../_base_/datasets/rcdb.py',
     '../_base_/default_runtime.py', '../_base_/schedules/schedule_300.py'
 ]
 
