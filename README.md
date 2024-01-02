@@ -9,9 +9,11 @@ Details are described in the following paper:
 <img src="segrcdb.JPG" width= "500px">
 
 # Changelog
+2023/01/02: Add pre-training and fine-tuning code. A docker file is also provided. (Thanks for MMsegmentation)
+
 2023/09/29: Released SegRCDB generation code and pretrained models.
 
-# Requirements
+# Requirements for SegRCDB generation
 - Python 3 (worked at 3.7)
 - noise (worked at 1.2.2)
 - PIL (worked at 9.0.0)
@@ -82,8 +84,24 @@ You can change the dataset folder name with --save_root. For faster execution, y
 # Pre-trained weights
 Download pre-training models : [**Google Drive**](https://drive.google.com/drive/folders/1MGDnq6kZEzxgKquVnSO-B0UpT4N3ylwY?usp=sharing).
 
-We used [MMSegmentation](https://github.com/open-mmlab/mmsegmentation) , and trained on Swin-base and UPerNet. 
+We used [MMSegmentation](https://github.com/open-mmlab/mmsegmentation), and trained on Swin-base and UPerNet. 
 
+# Pre-training and Fine-tuning on MMsegmentation
+We used MMsegmentation version '0.28.0'.  
+We uploaded mmsegmentation-0.28.0 folder for convenience.
+
+Compared to the official repository, we add dataset config and pre-training/fine-tuning config for SegRCDB.
+
+You can use the config files below.
+```
+config/swin/upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K_finetune_segrcdb.py (Fine-tuning)
+config/swin/upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K_pretrain_segrcdb.py (Pre-training)
+```
+For fine-tuning, please download pre-trained models from the above section.  
+For pre-training, please set your SegRCDB image folder.
+
+For the details, please see the [MMsegmentation document](https://mmsegmentation.readthedocs.io/en/0.x/).  
+We write all the training and fine-tuning settings in the appendix.
 
 # Citation
 If you find our work useful for your research, please consider citing our paper:
