@@ -1,6 +1,6 @@
 _base_ = [
     './upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_'
-    'pretrain_224x224_1K_finetune_rcdb.py'
+    'pretrain_224x224_1K_finetune_segrcdb.py'
 ]
 
 checkpoint_file ="put_your_checkpoint_path"
